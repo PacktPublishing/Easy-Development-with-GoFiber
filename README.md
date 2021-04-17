@@ -1,2 +1,3 @@
-# Easy-Development-with-GoFiber
-Easy Development with GoFiber, published by Packt
+# Easy Development with GoFiber
+
+Easy Development with GoFiber, published by Packt.
