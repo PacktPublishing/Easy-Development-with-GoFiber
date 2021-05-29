@@ -15,7 +15,7 @@ func main() {
 	// Create a new Fiber instance
 	app := fiber.New()
 
-	// CSRF configuration
+	// Set config for CSRF middleware
 	csrfConfig := csrf.Config{
 		KeyLookup:      "header:X-Csrf-Token", // string in the form of '<source>:<key>' that is used to extract token from the request
 		CookieName:     "my_csrf_",            // name of the session cookie
@@ -27,7 +27,7 @@ func main() {
 	// Use middlewares for each route
 	app.Use(
 		helmet.New(),         // add Helmet middleware
-		csrf.New(csrfConfig), // add CSRF middleware with config
+		csrf.New(csrfConfig), // add CSRF middleware with custom config
 	)
 
 	// Create a new endpoint
